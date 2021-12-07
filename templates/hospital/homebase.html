@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+      <link rel="stylesheet" href='{% static "bootstrap/css/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href='{% static "font-awesome/css/font-awesome.min.css" }'>
+  <script src='{% static "jquery-3.4.1.min.js" %}'></script>
+  <script src='{% static "popper.min.js" %}'></script>
+  <script src='{% static "bootsrap/js/bootstrap.min" %}'></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="utf-8">
+  <title>Eng-Azia</title>
+  <style>
+
+      .btnSubmit
+      {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: -webkit-linear-gradient(left, blue, #E403FB);
+      color: #fff;
+    }
+     .note {
+      text-align: center;
+      height: 80px;
+      background:  -webkit-linear-gradient(left, blue, #E403FB);
+      color: #fff;
+      font-weight: bold;
+      line-height: 80px;
+    }
+
+
+
+</style>
+
+
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  {%block content%}
+
+  {%endblock content%}
+  {% include "hospital/footer.html" %}
+</body>
+
+</html>

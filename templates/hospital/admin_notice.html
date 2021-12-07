@@ -1,0 +1,98 @@
+{% extends 'hospital/admin_base.html' %}
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
+
+<br><br><br>
+
+{% block content %}
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 100px;
+      background: -webkit-linear-gradient(blue, #ADD8E6, #ADD8E6);
+      color: #fff;
+      font-weight: bold;
+      line-height: 100px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 2px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+      height: 200px;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #ADD8E6;
+      color: #fff;
+    }
+  </style>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<br><br><br>
+
+<!------ notice page for  by admin(sumit)  ---------->
+<form method="post">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+        <p>Fariimaha guud</p>
+      </div>
+
+      <div class="form-content">
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <div class="form-group">
+              {% render_field form.message class="form-control" placeholder="Write Your Message Here" %}
+            </div>
+            <div class="form-group">
+              {% render_field form.by type="hidden"  class="form-control"  %}
+            </div>
+
+
+
+            </div>
+
+
+        </div>
+        <div>
+
+        </div>
+
+
+
+      </div>
+      <button type="submit" class="btnSubmit">Submit</button>
+    </div>
+  </div>
+
+</form>
+
+<br>
+
+{% endblock content %}
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href='{% static "bootstrap/css/bootstrap.min.css" %}'>
+  <link rel="stylesheet" href='{% static "font-awesome/css/font-awesome.min.css" }'>
+  <script src='{% static "jquery-3.4.1.min.js" %}'></script>
+  <script src='{% static "popper.min.js" %}'></script>
+  <script src='{% static "bootsrap/js/bootstrap.min" %}'></script>
+
+  <style type="text/css">
+    .bs-example {
+      margin: 0px;
+
+    }
+
+    .navbar-brand {
+      font-size: 20px;
+      font-family: sans-serif;
+
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="bs-example">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background:#add8e6">
+      <a href="/" class="navbar-brand" style="color:blue"><B><h3>Home</h3></B></a>
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav">
+
+          <a href="/adminclick" class="nav-item nav-link" style="color:black"><h5>Admin</h5></a>
+          <a href="/doctorclick" class="nav-item nav-link" style="color:black"><h5>Doctor</h5></a>
+          <a href="/patientclick" class="nav-item nav-link" style="color:black"><h5>Patient</h5></a>
+          <a href="/laboratoristclick" class="nav-item nav-link" style="color:black"> <h5>Laboratorist</h5></a>
+
+
+
+        </div>
+
+        <div class="navbar-nav">
+
+          <a href="/aboutus" class="nav-item nav-link" style="color: black">About Us</a>
+          <a href="/contactus" class="nav-item nav-link" style="color: black">Contact Us</a>
+          <a href="/aboutus" class="nav-item nav-link" style="color: black">Complaints</a>
+          <a href="/aboutus" class="nav-item nav-link" style="color: black">Rate us</a>
+        </div>
+
+      </div>
+    </nav>
+    
+  </div>
+
+
+</body>
+
+</html>

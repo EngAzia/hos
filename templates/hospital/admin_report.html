@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Report</title>
+
+<body>
+<br><br>
+
+<div class="row">
+<di id="container" style="width: 50%;">
+	<marquee ><h5 style="color:blue">Patient Registeration Cities Report</h5></marquee>
+		<canvas id="cities"></canvas>
+</di>
+
+<div id="container" style="width: 50%;">
+	<marquee ><h5 style="color:blue">Patient Diseases Report</h5></marquee>
+		<canvas id="diagnosis"></canvas>
+</div>
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script>
+	var city='{{city}}'
+	var burco='{{burco}}'
+	var borama='{{borama}}'
+	var gabilay='{{gabilay}}'
+	var ceerigabo='{{ceerigabo}}'
+	var barbara='{{barbara}}'
+
+    var hiv="{{ hiv }}"
+
+    var tp="{{tp}}"
+    var retinitis="{{ retinitis }}"
+    var glucoma="{{ glucoma }}"
+    var flu="{{ flu }}"
+    var malaria="{{ malaria }}"
+    var allergic="{{ allergic }}"
+
+
+
+	var cities = {
+	  type: 'pie',
+	  data: {
+		datasets: 
+		[
+		{
+			
+		  data: [city, gabilay,burco, borama,ceerigabo,barbara,barbara],
+		  backgroundColor: [
+			'#ff0000', 'orange', '#ff0080', 'green', '#5c26ff', '#002db3',
+		  ],
+		  label: 'Population'
+		}
+		],
+		labels: ['Hargeisa', 'Gabilay', 'Burco','Borama','Ceerigabo ','Barbara',]
+	  },
+	  options: 
+	  {
+		responsive: true
+	  }
+	};
+
+
+
+
+
+	var diagnosis= {
+	  type: 'bar',
+	  data: {
+		datasets:
+		[
+		{
+
+		  data: [allergic, glucoma,flu, retinitis,tp,hiv],
+		  backgroundColor: [
+			'green', 'orange', '#F908FA', '#E8A3AB', 'EAEA0A', 'red',
+		  ],
+		  label: 'Total Diagnosis'
+		}
+		],
+		labels: ['Alergic', 'Glucome', 'Flu','Retinitis','TP','HIV',]
+	  },
+	  options:
+	  {
+		responsive: true
+	  }
+	};
+
+
+
+
+
+
+
+
+
+	
+	window.onload = function() {
+	//city is the new var while cities is name of variable in above
+	  var city = document.getElementById('cities').getContext('2d');
+	  window.myPie = new Chart(city, cities);
+
+	  var diagnos = document.getElementById('diagnosis').getContext('2d');
+	  window.myPie = new Chart(diagnos, diagnosis);
+
+
+
+	};
+
+	</script>
+
+  
+
+</body>
+
+</body>
+</html>

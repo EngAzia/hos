@@ -1,0 +1,107 @@
+{% extends 'hospital/admin_base.html' %}
+{% load widget_tweaks %}
+
+
+
+
+{% block content %}
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    .note {
+      text-align: center;
+      height: 100px;
+      background: -webkit-linear-gradient(blue, #ADD8E6, #ADD8E6);
+      color: #fff;
+      font-weight: bold;
+      line-height: 100px;
+    }
+
+    .form-content {
+      padding: 5%;
+      border: 2px solid #ced4da;
+      margin-bottom: 2%;
+    }
+
+    .form-control {
+      border-radius: 1.5rem;
+      height: 200px;
+    }
+
+    .btnSubmit {
+      border: none;
+      border-radius: 1.5rem;
+      padding: 1%;
+      width: 20%;
+      cursor: pointer;
+      background: #0062cc;
+      color: #fff;
+    }
+  </style>
+
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+
+<!------ notice page for  by admin(sumit)  ---------->
+<form method="post">
+  {% csrf_token %}
+  <div class="container register-form">
+    <div class="form">
+      <div class="note">
+        <p>Announce Something</p>
+      </div>
+
+      <div class="form-content">
+        <div class="row">
+
+          <div class="col-md-12">
+
+            <div class="form-group">
+              {% render_field form.message class="form-control" placeholder="Write Your Message Here" %}
+            </div>
+            <div class="form-group">
+              {% render_field form.byo type="hidden"  class="form-control"  %}
+            </div>
+            <div class="form-group">
+              {% render_field form.to  class="form-control"  %}
+            </div>
+               <div class="form-group">
+              {% render_field form.m_participant  class="form-control"  %}
+            </div>
+            <!-- <div class="form-group">
+              <label style="color:blue">choose your massage to specific student</label>
+              <select >
+                <option value="{% render_field form.to class="form-control"  %}">
+
+                </option>
+
+
+              </select>
+            </div> -->
+
+
+        </div>
+        <div>
+
+        </div>
+
+
+
+      </div>
+      <button type="submit" class="btnSubmit">Submit</button>
+    </div>
+  </div>
+
+</form>
+
+
+
+{% endblock content %}

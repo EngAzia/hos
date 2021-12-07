@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> report</title>
+	<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+<body>
+	
+	<div id="container" style="width: 75%;">
+		<canvas id="pie-chart"></canvas>
+	</div>
+	<br>
+
+	<div id="container" style="width: 75%;">
+		<canvas id="xanuun"></canvas>
+	</div>
+	
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script><script>
+	var city='{{city}}'
+    var config = {
+      type: 'bar',
+      data: {
+        datasets: [{
+			
+          data: [allergy, cancer,conjuctivitis, glucoma,tp,cold,retinitis,hiv ],
+          backgroundColor: [
+            '#ff0000', '#0000ff', '#ff0080', '#73ffff', '#5c26ff', '#002db3', '#ffff26', '#4cff4c', '#ff00ff'
+          ],
+          label: 'Population'
+        }],
+        labels: ['hargeisa', 'gabilay', 'burco','borama','laascanod','ceerigabo ','oodwayne','barbara',]
+      },
+      options: {
+        responsive: true
+      }
+    };
+ 
+    window.onload = function() {
+      var ctx = document.getElementById('pie-chart').getContext('2d');
+      window.myPie = new Chart(ctx, config);
+    };
+  </script>
+
+
+  
+
+</body>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>waiting</title>
+
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  {% include "hospital/navbar.html" %}
+  <br>
+  <br>
+
+  <div class="jumbotron" style="margin-top: 0px;
+    margin-bottom: 0px;">
+    <h1 class="display-4">asc {{request.user.first_name}}</h1>
+    <p class="lead">adiga oo mahadsan inyar sug accountkan wali lama aqbalin <br><br> waxan baadhi doonta xogtaada kadib wa la aqbali doona ama la diidi doona !!!</p>
+    <hr class="my-4">
+    <p>ilaa 10 minute ayn ku aqbli doona account</p>
+    <p class="lead">
+      <a href="{% url 'logout' %}" class="nav-item nav-link">Logout</a>
+    </p>
+  </div>
+
+  {% include "hospital/footer.html" %}
+</body>
+
+
+</html>

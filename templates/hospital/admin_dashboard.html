@@ -1,0 +1,94 @@
+<div class="dhaman">
+{% extends 'hospital/admin_base.html' %}
+{% load static %}
+{% block content %}
+{%include 'hospital/admin_dashboard_cards.html'%}
+<head>
+
+  <style type="text/css">
+     .dhaman
+     {
+    /*  margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/nice.jpg" %}');
+      background-size: cover;
+      background-repeat: no-repeat;*/
+     }
+
+  </style>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+
+<div>
+  
+  {% include 'hospital/admin_report.html'  %}
+  
+</div>
+<br><br><br><br><br>
+
+
+  <div>
+
+    {% include 'hospital/fariimaha.html' %}
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="alert" >-->
+<!--  <h3 style="color: black;text-align: center;">fariimaha guud</h3>-->
+<!--  {%for n in massages%}-->
+<!--<div class="alert" style="background-color:#EFF0E5">-->
+<!--  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>-->
+<!--  <strong style="color: black"><b><p>{{n.date}} ||By :{{n.by}} </strong></p></b><br>-->
+<!--  <p style="color: black;text-align:left;">{{n.message}}</p>-->
+<!--</div>-->
+<!--{%endfor%}-->
+<!--</div>-->
+
+
+
+
+
+<!--  <br>-->
+
+
+<!--  <div class="alert">-->
+<!--  <h3 style="color: black;text-align: center;">fariimaha khaas</h3>-->
+
+<!--    {%for n in khaas %}-->
+<!--<div class="alert" style="background-color: #F1DFE1; border-style: dotted;">-->
+<!--  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>-->
+<!--  <strong style="color: black"><b><p>{{n.date}} ||By :{{n.by}} ||to:{{n.to}} </strong></p></b><br>-->
+<!--  <p style="color: black;text-align: left;">{{n.message}}</p>-->
+<!--</div>-->
+<!--{%endfor%}-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+{% endblock content %}
+

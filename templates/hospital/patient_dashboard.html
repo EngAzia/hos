@@ -1,0 +1,34 @@
+{% extends 'hospital/patient_base.html' %}
+{% load static %}
+{% block content %}
+{%include 'hospital/patient_dashboard_cards.html'%}
+<br><br><br><br>
+
+<div class="w3-panel w3-blue " style="background-color: black">
+  <h3 style="color: white;text-align: center;">Massages</h3>
+</div><br>
+{%for n in massages%}
+<div class="alert" style="background-color: blue">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong style="color: white"><p>{{n.date}} ||By :{{n.by}} </strong></p><br>
+  <p style="color: white;text-align: left;">{{n.message}}</p>
+</div>
+{%endfor%}
+
+<br>
+
+
+<div class="alert" style="background-color: green">
+  <h3 style="color: black;text-align: center;">Fariimo Khaasa</h3>
+</div>
+
+{%for n in khaas %}
+<div class="alert" style="background-color: green">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong style="color: white"><b><p>{{n.date}} ||By :{{n.by}} ||to:{{n.to}} </strong></p></b><br>
+  <p style="color: black;text-align: cente;">{{n.message}}</p>
+</div>
+{%endfor%}
+
+
+{% endblock content %}
