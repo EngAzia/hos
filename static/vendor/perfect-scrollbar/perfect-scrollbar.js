@@ -1,7 +1,6 @@
 /*!
  * perfect-scrollbar v1.3.0
- * (c) 2017 Hyunje Jun
- * @license MIT
+ * (c) 2021 Azia
  */
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :

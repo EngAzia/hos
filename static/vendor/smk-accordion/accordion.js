@@ -1,9 +1,8 @@
 /**
  * Plugin Name : Accordion.JS
  * Version     : 2.1.0
- * Author      : ZeroWP Team
- * Author URL  : http://zerowp.com/
- * Plugin URL  : http://accordionjs.zerowp.com/
+ * Author      : Azia
+ * Author URL  : http://engaziya1blogspot.com/
  */
 ;(function ( $ ) {
 

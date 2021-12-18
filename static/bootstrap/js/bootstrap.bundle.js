@@ -1,7 +1,7 @@
 /*!
-  * Bootstrap v4.3.1 (https://getbootstrap.com/)
-  * Copyright  The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (twbs/bootstrap/blob/master/)
+  * Bootstrap v4.3.1 
+  * Copyright  The Bootstrap Authors 
+  * https://engaziya1.blogspot.com/
   */
 (function (global, factory) {
   typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('jquery')) :
